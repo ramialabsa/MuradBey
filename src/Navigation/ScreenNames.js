@@ -1,7 +1,0 @@
-const NAVIGATION_LOGINSCREEN = 'LoginScreen';
-const NAVIGATION_INTROSCREEN = 'IntroScreen';
-
-export const ScreenNames = {
-  NAVIGATION_LOGINSCREEN,
-  NAVIGATION_INTROSCREEN,
-};

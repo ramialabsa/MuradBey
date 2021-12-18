@@ -1,10 +1,19 @@
-import React from 'react';
-import {ImageBackground, Image, View, Text} from 'react-native';
+import React, {Component} from 'react';
+import {
+  ImageBackground,
+  Image,
+  View,
+  Text,
+  TouchableOpacity,
+} from 'react-native';
 import styles from '../AuthStyle';
 import Images from '../../../Constants/Images';
 import Buttons from '../../../Constants/Buttons';
-import AllColors from '../../../Constants/AllColors';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import LoginScreen from '../LoginScreen/LoginScreen';
 const IntroScreen = () => {
+  const navigation = useNavigation();
   return (
     <View style={styles.img}>
       <ImageBackground
@@ -17,7 +26,12 @@ const IntroScreen = () => {
         </View>
         <View style={styles.center}>
           <Text style={styles.font}>Don't have an account!?</Text>
-          <Text style={styles.font}>Sign up</Text>
+          <TouchableOpacity
+            onPress={() => {
+              navigation.navigate('SignUpScreen');
+            }}>
+            <Text style={styles.font}>Sign up</Text>
+          </TouchableOpacity>
         </View>
       </ImageBackground>
     </View>

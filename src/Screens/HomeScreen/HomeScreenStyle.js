@@ -1,70 +1,68 @@
-import {StyleSheet, Dimensions} from 'react-native';
+import {Flex} from 'native-base';
+import {
+  StyleSheet,
+  Dimensions,
+  SafeAreaView,
+  ScrollView,
+  StatusBar,
+} from 'react-native';
 export const {maxWidth, maxHeight} = Dimensions.get('screen');
 import AllColors from '../../Constants/AllColors';
 
 export default StyleSheet.create({
+  container: {
+    flexDirection: 'column',
+    // paddingTop: StatusBar.currentHeight,
+  },
+  scrollView: {},
   img: {
     width: maxWidth,
     height: maxHeight,
     display: 'flex',
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
   },
-  Authimg: {
-    width: maxWidth,
-    height: maxHeight,
-    display: 'flex',
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-  },
-  button: {
-    backgroundColor: AllColors.primary,
-    width: 200,
-    height: 35,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 100,
-  },
-  logo: {
-    width: 252,
-    height: 238,
-    position: 'absolute',
-    zIndex: 1,
-    // backgroundColor: 'white',
-  },
-  logo1: {
-    width: 185,
-    height: 174,
-    position: 'absolute',
-    zIndex: 1,
-    // backgroundColor: 'white',
-  },
+
   font: {
     fontSize: 13,
     color: AllColors.white,
   },
-  center: {
-    justifyContent: 'flex-end',
+
+  searchbar: {
+    justifyContent: 'center',
     alignItems: 'center',
-    top: 100,
+    bottom: 20,
   },
-  topCenter: {
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    marginBottom: 50,
+  Carousel: {
+    height: 200,
+    width: maxWidth,
+    alignSelf: 'center',
+    justifyContent: 'center',
   },
-  bigFonts: {
+  fonts: {fontSize: 24},
+  smallFonts: {fontSize: 18},
+  Categories: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    margin: 10,
+  },
+  card: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginLeft: 20,
+    marginRight: 20,
+    marginTop: 20,
+  },
+  blackFonts: {
     fontSize: 24,
-    color: AllColors.white,
-    borderBottomWidth: 1,
+    color: AllColors.black,
+    fontWeight: 'bold',
+    margin: 10,
   },
-  endCenter: {
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    top: 50,
+  smallBlackFonts: {
+    fontSize: 15,
+    color: AllColors.black,
+    margin: 10,
   },
 });
